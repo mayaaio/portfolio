@@ -1,13 +1,11 @@
 {
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "outDir": "./built",
-    "allowJs": true,
-    "target": "es5",
-    "typeRoots": ["types.d.ts"],
-    "types": [
-      "node"
-    ],
-  },
-  "include": ["./src/**/*"]
+	"compilerOptions": {
+		"jsx": "react-jsx",
+		"outDir": "./built",
+		"allowJs": true,
+		"target": "es5",
+		"typeRoots": ["types.d.ts"],
+		"types": ["node"]
+	},
+	"include": ["./src/**/*"]
 }
