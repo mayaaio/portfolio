@@ -3,12 +3,13 @@ import { useHover } from "@mantine/hooks";
 import process from "process";
 
 interface CardProps {
-  display_name: string;
-  description: string;
-  location: string;
+  public_id: string;
+  format: string;
+  location?: string;
+  description?: string;
 }
 
-function PhotoCard({ display_name, description, location }: CardProps) {
+function PhotoCard({ public_id, format, location, description }: CardProps) {
   const { hovered, ref } = useHover();
   return (
     <Paper
@@ -27,9 +28,10 @@ function PhotoCard({ display_name, description, location }: CardProps) {
         src={
           `https://res.cloudinary.com/` +
           process.env.REACT_APP_CLOUDINARY_CLOUD_NAME +
-          `/image/upload/f_auto/portfolio/` +
-          display_name +
-          `.heic`
+          `/image/upload/f_auto/` +
+          public_id +
+          "." +
+          format
         }
         style={{
           height: "300px",

@@ -2,21 +2,49 @@
   {
     "display_name": "tpyh9upxely8yhjdmsjk",
     "description": "Picnics on lake tahoe with friends",
-    "location": "Lake Tahoe, NV"
+    "location": "Lake Tahoe, NV",
+    "format": "heic"
   },
   {
     "display_name": "oxnvd6tn4w0siqjf1pam",
     "description": "Stargazing",
-    "location": "Lake Tahoe, NV"
+    "location": "Lake Tahoe, NV",
+    "format": "heic"
   },
   {
     "display_name": "p75582mqsvddwhkvrn3i",
     "description": "SUP",
-    "location": "Zephyr Cove, NV"
+    "location": "Zephyr Cove, NV",
+    "format": "heic"
   },
   {
     "display_name": "lt2lafmtiuy5gaeue55q",
     "description": "Ski Run farmer's market",
-    "location": "South lake tahoe, CA"
+    "location": "Ski Run farmer's market",
+    "format": "heic"
+  },
+  {
+    "display_name": "29a37b54-d7ed-4de7-b353-272daacdc006_csgvv7",
+    "description": "Turtle friends",
+    "location": "Paia beach, HI",
+    "format": "jpg"
+  },
+  {
+    "display_name": "IMG_5507_sl0fet",
+    "description": "",
+    "location": "Kaanapali beach, HI",
+    "format": "jpg"
+  },
+  {
+    "display_name": "IMG_5681_jrojva",
+    "description": "",
+    "location": "Haleakala",
+    "format": "jpg"
+  },
+  {
+    "display_name": "FullSizeRender_1_qgfnwn",
+    "description": "",
+    "location": "Kapalua cliff house",
+    "format": "jpg"
   }
 ]
