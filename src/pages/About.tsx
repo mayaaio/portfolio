@@ -5,7 +5,12 @@ import PhotoCarousel from "../components/PhotoCarousel";
 
 function About() {
   return (
-    <Stack>
+    <Stack
+      style={{
+        width: "80vw", // Stack takes 80% of the viewport width
+        margin: "0 auto", // Centers the Stack horizontally
+      }}
+    >
       <Title order={1}>About me</Title>
       <Text fs="italic">
         Hi, I'm Maya! I'm a graduate of UPenn with a degree in Computer Science
