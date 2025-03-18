@@ -16,7 +16,7 @@ function About() {
         I'm eager to bring my skills and passion back to the workforce. Feel
         free to explore my resume and some photos from my journey below :)
       </Text>
-      <Text component={Link} target="_blank" to={Pdf}>
+      <Text component={Link} target="_blank" to={Pdf} td="underline">
         Resume
       </Text>
       <PhotoCarousel />
