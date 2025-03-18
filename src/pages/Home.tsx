@@ -6,7 +6,7 @@ import Projects from "./Projects";
 
 const Home = () => {
   return (
-    <Stack w="100%">
+    <Stack>
       <Title pb="sm">Hi, I'm Maya Itkin-Ofer</Title>
       <Tabs defaultValue="about" orientation="vertical">
         <Tabs.List>

@@ -1,6 +1,7 @@
 import { Carousel } from "@mantine/carousel";
 import { useEffect, useState } from "react";
 import PhotoCard from "./PhotoCard";
+import { Container } from "@mantine/core";
 
 function PhotoCarousel() {
   const [images, setImages] = useState([]);
@@ -28,6 +29,7 @@ function PhotoCarousel() {
       controlsOffset="sm"
       loop
       dragFree
+      slidesToScroll={3}
     >
       {images.map((image, index) => (
         <Carousel.Slide key={index}>
