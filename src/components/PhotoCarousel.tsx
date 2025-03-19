@@ -1,6 +1,7 @@
 import { Carousel } from "@mantine/carousel";
 import { useEffect, useState } from "react";
 import PhotoCard from "./PhotoCard";
+import { Stack, Title } from "@mantine/core";
 
 function PhotoCarousel() {
   const [images, setImages] = useState([]);
@@ -42,21 +43,24 @@ function PhotoCarousel() {
   }, []);
 
   return (
-    <Carousel
-      align="start"
-      slideSize="auto"
-      slideGap="md"
-      controlsOffset="sm"
-      loop
-      dragFree
-      // slidesToScroll={3} // update this later to reflect the size of the viewport
-    >
-      {images.map((image, index) => (
-        <Carousel.Slide key={index}>
-          <PhotoCard {...image} />
-        </Carousel.Slide>
-      ))}
-    </Carousel>
+    <Stack>
+      <Title>Highlights</Title>
+      <Carousel
+        align="start"
+        slideSize="auto"
+        slideGap="md"
+        controlsOffset="sm"
+        loop
+        dragFree
+        // slidesToScroll={3} // update this later to reflect the size of the viewport
+      >
+        {images.map((image, index) => (
+          <Carousel.Slide key={index}>
+            <PhotoCard {...image} />
+          </Carousel.Slide>
+        ))}
+      </Carousel>
+    </Stack>
   );
 }
 

@@ -2,6 +2,7 @@ import { Title, Text, Stack } from "@mantine/core";
 import Pdf from "../assets/Resume.pdf";
 import { Link } from "react-router-dom";
 import PhotoCarousel from "../components/PhotoCarousel";
+import CareerTimeline from "../components/CareerTimeline";
 
 function About() {
   return (
@@ -22,8 +23,9 @@ function About() {
         free to explore my resume and some photos from my journey below :)
       </Text>
       <Text component={Link} target="_blank" to={Pdf} td="underline">
-        Resume
+        My Resume
       </Text>
+      <CareerTimeline />
       <PhotoCarousel />
     </Stack>
   );
