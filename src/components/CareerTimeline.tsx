@@ -10,7 +10,6 @@ import {
   IconMapPin,
   IconCalendar,
 } from "@tabler/icons-react";
-import { start } from "repl";
 
 function TimeLineItem({
   title,

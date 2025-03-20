@@ -1,7 +1,7 @@
 import { Carousel } from "@mantine/carousel";
 import { useEffect, useState } from "react";
 import PhotoCard from "./PhotoCard";
-import { Stack, Title } from "@mantine/core";
+import { Stack, Text } from "@mantine/core";
 
 function PhotoCarousel() {
   const [images, setImages] = useState([]);
@@ -17,8 +17,6 @@ function PhotoCarousel() {
             `/image/list/portfolio.json`
         );
         const data = await response.json();
-        console.log(data);
-
         const imageData = data.resources || [];
 
         if (Array.isArray(imageData)) {
@@ -44,7 +42,7 @@ function PhotoCarousel() {
 
   return (
     <Stack>
-      <Title>Highlights</Title>
+      <Text>Some career break highlights</Text>
       <Carousel
         align="start"
         slideSize="auto"
