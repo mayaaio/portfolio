@@ -1,10 +1,9 @@
-import { Title, Text, Stack, Button } from "@mantine/core";
-import Pdf from "../assets/Resume.pdf";
-import { Link } from "react-router-dom";
+import { Title, Text, Stack, Button, Group } from "@mantine/core";
 import PhotoCarousel from "../components/PhotoCarousel";
-import CareerTimeline from "../components/CareerTimeline";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import BottomSection from "../components/BottomSection";
+import TopSection from "../components/TopSection";
 
 function About() {
   const [showTimeline, setShowTimeline] = useState(false);
@@ -80,53 +79,17 @@ function About() {
         margin: "0 auto", // Centers the Stack horizontally
       }}
     >
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 2 }}
-        id="intro-section"
-      >
-        <Stack>
-          <Title order={1}>About me</Title>
-          <Text fs="italic" size="xl" mt="sm">
-            I'm a graduate of UPenn with a degree in Computer Science and Health
-            and Societies. Two years ago, after being laid off, I embraced the
-            opportunity to take a career break. I spent that time traveling solo
-            and volunteering across the globe, gaining invaluable experiences
-            that expanded my horizons. Now, after two enriching years, I'm eager
-            to bring my skills and passion back to the workforce. Feel free to
-            explore my resume and some photos from my journey below :)
-          </Text>
-          <PhotoCarousel />
-          <Button
-            variant="transparent"
-            mt="lg"
-            onClick={atBottom ? handleScrollUp : handleScrollDown}
-          >
-            {atBottom ? "Scroll Up ↑" : "Scroll Down ↓"}
-          </Button>
-        </Stack>
-      </motion.div>
+      <TopSection
+        atBottom={atBottom}
+        handleScrollDown={handleScrollDown}
+        handleScrollUp={handleScrollUp}
+      />
 
       <div
         style={{ height: spacingHeight, transition: "height 0.5s ease-in-out" }}
       />
 
-      {showTimeline && (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          id="timeline-section"
-        >
-          <Stack>
-            <Text component={Link} target="_blank" to={Pdf} td="underline">
-              My Resume
-            </Text>
-            <CareerTimeline />
-          </Stack>
-        </motion.div>
-      )}
+      {showTimeline && <BottomSection />}
     </Stack>
   );
 }
