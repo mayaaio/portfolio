@@ -9,10 +9,11 @@ function Layout() {
       <AppShell>
         <AppShell.Header>
           <Group px="md" py="md">
-            <ActionIcon component={Link} to="/">
+            <ActionIcon variant="transparent" component={Link} to="/">
               <Home />
             </ActionIcon>
             <ActionIcon
+              variant="transparent"
               component={Link}
               target="_blank"
               to="https://github.com/mayaaio"
@@ -22,7 +23,7 @@ function Layout() {
             <LightDarkButton />
           </Group>
         </AppShell.Header>
-        <Container fluid my={40}>
+        <Container fluid my={50}>
           <Outlet />
         </Container>
       </AppShell>
