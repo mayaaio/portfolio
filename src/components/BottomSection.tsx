@@ -3,8 +3,17 @@ import { motion } from "framer-motion";
 import CareerTimeline from "./CareerTimeline";
 import { Link } from "react-router-dom";
 import Pdf from "../assets/Resume.pdf";
+import { useState } from "react";
 
 const BottomSection = () => {
+  const [selectedCareerIndex, setSelectedCareerIndex] = useState(6);
+
+  const handleCareerSelect = (index: number) => {
+    setSelectedCareerIndex(index);
+    // Additional logic when a career item is selected (if needed)
+    console.log("Selected career index:", index);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -17,7 +26,7 @@ const BottomSection = () => {
           <Text component={Link} target="_blank" to={Pdf} td="underline">
             My Resume
           </Text>
-          <CareerTimeline />
+          <CareerTimeline onCareerSelect={handleCareerSelect} />
         </Stack>
         <Text size="xl" style={{ maxWidth: 300, wordWrap: "break-word" }}>
           I’m looking for a software engineering role where I can make a real

@@ -1,4 +1,4 @@
-import { Timeline, Text, Group } from "@mantine/core";
+import { Timeline } from "@mantine/core";
 import {
   IconSchool,
   IconFileTypeTsx,
@@ -7,38 +7,14 @@ import {
   IconPlaneTilt,
   IconListLetters,
   IconSearch,
-  IconMapPin,
-  IconCalendar,
 } from "@tabler/icons-react";
+import TimeLineItem from "./TimeLineItem";
 
-function TimeLineItem({
-  title,
-  description,
-  location,
-  skills,
-  startDate,
-  endDate,
-  icon,
-}) {
-  return (
-    <Timeline.Item title={title} bullet={icon}>
-      {location && (
-        <Group gap="xs">
-          <IconMapPin size={14} />
-          <Text size="xs">{location}</Text>
-        </Group>
-      )}
-      <Group gap="xs" mt={4}>
-        <IconCalendar size={14} />{" "}
-        <Text size="xs">
-          {startDate} - {endDate}
-        </Text>
-      </Group>
-    </Timeline.Item>
-  );
+interface CareerTimelineProps {
+  onCareerSelect: (index: number) => void;
 }
 
-function CareerTimeline() {
+function CareerTimeline({ onCareerSelect }: CareerTimelineProps) {
   return (
     <Timeline active={4} bulletSize={24} lineWidth={2}>
       <TimeLineItem
@@ -51,6 +27,7 @@ function CareerTimeline() {
         startDate={2018}
         endDate={2022}
         icon={<IconSchool size={16} />}
+        onClick={() => onCareerSelect(0)}
       />
       <TimeLineItem
         title={"Ophelia"}
@@ -60,6 +37,7 @@ function CareerTimeline() {
         startDate={2022}
         endDate={2023}
         icon={<IconFileTypeTsx size={16} />}
+        onClick={() => onCareerSelect(1)}
       />
       <TimeLineItem
         title={"Volunteer + travel"}
@@ -69,6 +47,7 @@ function CareerTimeline() {
         startDate={2023}
         endDate={2023}
         icon={<IconRainbow size={16} />}
+        onClick={() => onCareerSelect(2)}
       />
       <TimeLineItem
         title={"Volunteer + travel"}
@@ -78,6 +57,7 @@ function CareerTimeline() {
         startDate={2023}
         endDate={2023}
         icon={<IconMountain size={16} />}
+        onClick={() => onCareerSelect(3)}
       />
       <TimeLineItem
         title={"Backpacking in Southeast Asia"}
@@ -87,6 +67,7 @@ function CareerTimeline() {
         startDate={2023}
         endDate={2024}
         icon={<IconPlaneTilt size={16} />}
+        onClick={() => onCareerSelect(4)}
       />
       <TimeLineItem
         title={"Teaching"}
@@ -96,6 +77,7 @@ function CareerTimeline() {
         startDate={2024}
         endDate={2025}
         icon={<IconListLetters size={16} />}
+        onClick={() => onCareerSelect(5)}
       />
       <TimeLineItem
         title={"Job search"}
@@ -105,6 +87,7 @@ function CareerTimeline() {
         startDate={2025}
         endDate={"current"}
         icon={<IconSearch size={16} />}
+        onClick={() => onCareerSelect(6)}
       />
     </Timeline>
   );

@@ -10,7 +10,6 @@ function PhotoCarousel() {
     const fetchImagesData = async () => {
       try {
         // Fetch the image metadata JSON file
-        //const response = await fetch("/images.json");
         const response = await fetch(
           `https://res.cloudinary.com/` +
             process.env.REACT_APP_CLOUDINARY_CLOUD_NAME +
