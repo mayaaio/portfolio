@@ -1,0 +1,100 @@
+[
+  {
+    "title": "University of Pennsylvania",
+    "position": "Student",
+    "description": "I developed a strong technical foundation in computer science while exploring the intersection of technology and healthcare, preparing me to solve complex problems in both fields",
+    "location": "Philadelphia, PA",
+    "majors": ["Computer and Information Science", "Health & Societies"],
+    "gpa": "3.90",
+    "skills": ["Java", "SQL", "Python", "pandas", "MongoDB"],
+    "courses": [
+      "Database & Info Systems (CIS 450)",
+      "Big Data Analytics (CIS 545)",
+      "Scalable and Cloud Computing (NETS 212)",
+      "Software Design & Engineering (CIS 350)"
+    ],
+    "startDate": 2018,
+    "endDate": 2022,
+    "projects": [
+      "Pennbook",
+      "Predicting Popularity and Release Date of A Song (CIS 545)"
+    ],
+    "icon": "school"
+  },
+  {
+    "title": "Ophelia",
+    "position": "Fullstack Software Engineer",
+    "description": "As part of the clinician-facing team at Ophelia, I developed tools to improve provider workflows and patient care. I worked on enhancing the company’s electronic medical record system, integrating prescribing functionality, and modernizing the UI for a seamless clinician experience.",
+    "location": "New York City, NY",
+    "skills": ["React", "Mantine", "TypeScript", "Node.js"],
+    "startDate": 2022,
+    "endDate": 2023,
+    "projects": [
+      "EMR Medication Prescribing Integration",
+      "Patient Registry",
+      "Custom Component Library & EMR Redesign"
+    ],
+    "icon": "tsx"
+  },
+  {
+    "title": "Volunteer + travel",
+    "position": "Volunteer",
+    "description": "After being laid off, I seized the opportunity to volunteer in a work-exchange program in Maui. I contributed to community projects while immersing myself in the local culture. I had incredible experiences and met amazing people who inspired me along the way.",
+    "location": "Wailuku, HI",
+    "highlights": [
+      "Sliding sands trail",
+      "Halema‘uma‘u Trail",
+      "camping under the stars in Kauai"
+    ],
+    "startDate": 2023,
+    "endDate": 2023,
+    "icon": "rainbow"
+  },
+  {
+    "title": "Volunteer + travel",
+    "position": "Volunteer",
+    "description": "After my adventures in Maui, I continued my journey in South Lake Tahoe. This work-exchange program gave me the chance to experience the peaceful beauty of the Sierra Nevada mountains, where I embraced the slow pace of lake life and the stunning natural surroundings..",
+    "location": "South Lake Tahoe, CA",
+    "highlights": [
+      "Seeing wild bears",
+      "camping under the stars",
+      "perfecting my slackline game"
+    ],
+    "startDate": 2023,
+    "endDate": 2023,
+    "icon": "mountain"
+  },
+  {
+    "title": "Backpacking in Southeast Asia",
+    "position": "Traveler",
+    "description": "I embarked on a solo backpacking trip across Southeast Asia, navigating challenging terrain and adapting to new environments. I developed strong problem-solving skills, resilience, and cultural awareness while overcoming logistical obstacles and navigating unfamiliar territories—experiences that have strengthened my ability to stay resourceful and composed in complex situations.",
+    "location": "Thailand, Laos, Cambodia, Vietnam, Nepal",
+    "highlights": [
+      "Annapurna cicuit and reaching Thorong La Pass (5,416m elevation)",
+      "Langtang national park and frozen lakes trek (Nepal)",
+      "Crossing Vietnam from south to north on motorcycle"
+    ],
+    "startDate": 2023,
+    "endDate": 2024,
+    "icon": "plane"
+  },
+  {
+    "title": "Teaching",
+    "position": "Instructor",
+    "description": "I recently completed a role as an instructor in a leadership program for Jewish leaders from around the world. I was responsible for managing logistics, coordinating and leading student committees, organizing hiking trips for 38 students, and recruitment for the next year. I focused on empowering students to engage actively with the material and develop critical thinking skills. My approach is centered around creating meaningful, real-world learning experiences that inspire growth and curiosity.",
+    "location": "Afikim, IL",
+    "highlights": ["Field expedition series", "Navigation series"],
+    "startDate": 2024,
+    "endDate": 2025,
+    "icon": "letters"
+  },
+  {
+    "title": "Job search",
+    "description": "I’m looking for a software engineering role where I can make a real impact by building products people will use and love. I’m excited by the idea of owning projects from start to finish, working hard, and seeing my efforts come to life. I’m eager to join a team where I can grow, take on meaningful responsibilities, gain hands-on experience, and constantly learn. I thrive in a collaborative environment with smart, passionate people who care about building great products with the user in mind.",
+    "location": "Remote/Anywhere",
+    "skills": null,
+    "startDate": 2025,
+    "endDate": "current",
+    "icon": "search"
+  }
+]
