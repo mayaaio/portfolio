@@ -1,11 +1,10 @@
 import { Group, Timeline, Text } from "@mantine/core";
 import { IconCalendar, IconMapPin } from "@tabler/icons-react";
+import { useState } from "react";
 
 interface TimeLineItemProps {
   title: string;
-  description?: string;
   location?: string;
-  skills?: string;
   startDate: number | string;
   endDate: number | string;
   icon: JSX.Element;
@@ -14,20 +13,30 @@ interface TimeLineItemProps {
 
 function TimeLineItem({
   title,
-  description,
   location,
-  skills,
   startDate,
   endDate,
   icon,
   onClick,
 }: TimeLineItemProps) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  // Handle mouse enter and leave events
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => setIsHovered(false);
+
   return (
     <Timeline.Item
       title={title}
       bullet={icon}
       onClick={onClick}
-      style={{ cursor: "pointer" }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      style={{
+        cursor: "pointer",
+        backgroundColor: isHovered ? "#f0f0f0" : "white",
+        transition: "background-color 0.3s ease",
+      }}
     >
       {location && (
         <Group gap="xs">
