@@ -23,7 +23,12 @@ function TimeLineItem({
   onClick,
 }: TimeLineItemProps) {
   return (
-    <Timeline.Item title={title} bullet={icon} onClick={onClick}>
+    <Timeline.Item
+      title={title}
+      bullet={icon}
+      onClick={onClick}
+      style={{ cursor: "pointer" }}
+    >
       {location && (
         <Group gap="xs">
           <IconMapPin size={14} />
