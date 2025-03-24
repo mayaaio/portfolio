@@ -1,5 +1,5 @@
 import { ActionIcon, AppShell, Container, Group, Paper } from "@mantine/core";
-import { GitHub, Home } from "react-feather";
+import { GitHub, Home, Linkedin } from "react-feather";
 import { Link, Outlet } from "react-router-dom";
 import LightDarkButton from "../components/LightDarkButton";
 import { IconBrandLinkedin } from "@tabler/icons-react";
@@ -27,7 +27,7 @@ function Layout() {
               target="_blank"
               to="https://www.linkedin.com/in/mayaitkinofer/"
             >
-              <IconBrandLinkedin />
+              <Linkedin />
             </ActionIcon>
             <LightDarkButton />
           </Group>
