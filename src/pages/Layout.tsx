@@ -2,6 +2,7 @@ import { ActionIcon, AppShell, Container, Group, Paper } from "@mantine/core";
 import { GitHub, Home } from "react-feather";
 import { Link, Outlet } from "react-router-dom";
 import LightDarkButton from "../components/LightDarkButton";
+import { IconBrandLinkedin } from "@tabler/icons-react";
 
 function Layout() {
   return (
@@ -19,6 +20,14 @@ function Layout() {
               to="https://github.com/mayaaio"
             >
               <GitHub />
+            </ActionIcon>
+            <ActionIcon
+              variant="transparent"
+              component={Link}
+              target="_blank"
+              to="https://www.linkedin.com/in/mayaitkinofer/"
+            >
+              <IconBrandLinkedin />
             </ActionIcon>
             <LightDarkButton />
           </Group>
