@@ -1,4 +1,4 @@
-import { Group, Timeline, Text } from "@mantine/core";
+import { Group, Timeline, Text, Stack } from "@mantine/core";
 import { IconCalendar, IconMapPin } from "@tabler/icons-react";
 import { useState } from "react";
 
@@ -9,6 +9,7 @@ interface TimeLineItemProps {
   endDate: number | string;
   icon: JSX.Element;
   onClick: () => void; // Added onClick prop to trigger the action when clicked
+  isSelected: () => Boolean;
 }
 
 function TimeLineItem({
@@ -18,6 +19,7 @@ function TimeLineItem({
   endDate,
   icon,
   onClick,
+  isSelected,
 }: TimeLineItemProps) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -38,17 +40,21 @@ function TimeLineItem({
         transition: "background-color 0.3s ease",
       }}
     >
-      {location && (
-        <Group gap="xs">
-          <IconMapPin size={14} />
-          <Text size="xs">{location}</Text>
-        </Group>
-      )}
-      <Group gap="xs" mt={4}>
-        <IconCalendar size={14} />{" "}
-        <Text size="xs">
-          {startDate} - {endDate}
-        </Text>
+      <Group>
+        <Stack gap="2">
+          {location && (
+            <Group gap="xs">
+              <IconMapPin size={14} />
+              <Text size="xs">{location}</Text>
+            </Group>
+          )}
+          <Group gap="xs">
+            <IconCalendar size={14} />{" "}
+            <Text size="xs">
+              {startDate} - {endDate}
+            </Text>
+          </Group>
+        </Stack>
       </Group>
     </Timeline.Item>
   );

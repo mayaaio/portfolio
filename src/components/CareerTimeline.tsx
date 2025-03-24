@@ -53,6 +53,7 @@ function CareerTimeline({
           endDate={item.endDate}
           icon={getIcon(item.icon)}
           onClick={() => onCareerSelect(index)}
+          isSelected={() => selectedCareerIndex == index}
         />
       ))}
     </Timeline>

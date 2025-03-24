@@ -6,6 +6,7 @@ import Pdf from "../assets/Resume.pdf";
 import { useState } from "react";
 import CareerItemCard from "./CareerItemCard";
 import { IconCornerDownLeft } from "@tabler/icons-react";
+import AnimatedArrow from "./AnimatedArrow";
 
 const BottomSection = () => {
   const [selectedCareerIndex, setSelectedCareerIndex] = useState(6);
@@ -21,33 +22,22 @@ const BottomSection = () => {
       transition={{ duration: 1 }}
       id="timeline-section"
     >
-      <Group justify="space-between">
-        <Stack>
-          <Text component={Link} target="_blank" to={Pdf} td="underline">
-            My Resume
-          </Text>
-          <CareerTimeline
-            onCareerSelect={handleCareerSelect}
-            selectedCareerIndex={selectedCareerIndex}
-          />
-        </Stack>
-        <motion.div
-          style={{
-            position: "absolute",
-            left: "30%",
-            // top: `calc(${(selectedCareerIndex + 1) * 100}px)`,
-            // left: `calc(${(selectedCareerIndex + 1) * 100}px)`, // Adjust based on timeline item width
-            transform: "translateY(-50%)",
-          }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <IconCornerDownLeft />
-        </motion.div>
+      <div style={{ position: "relative" }}>
+        <Group justify="space-between">
+          <Stack>
+            <Text component={Link} target="_blank" to={Pdf} td="underline">
+              My Resume
+            </Text>
+            <CareerTimeline
+              onCareerSelect={handleCareerSelect}
+              selectedCareerIndex={selectedCareerIndex}
+            />
+          </Stack>
+          <AnimatedArrow activeIndex={selectedCareerIndex} />
 
-        <CareerItemCard selectedCareerIndex={selectedCareerIndex} />
-      </Group>
+          <CareerItemCard selectedCareerIndex={selectedCareerIndex} />
+        </Group>
+      </div>
     </motion.div>
   );
 };
