@@ -3,8 +3,14 @@ import { useEffect, useState } from "react";
 import PhotoCard from "./PhotoCard";
 import { Stack, Text } from "@mantine/core";
 
+interface ImageData {
+  public_id: string;
+  format: string;
+  location?: string;
+}
+
 function PhotoCarousel() {
-  const [images, setImages] = useState([]);
+  const [images, setImages] = useState<ImageData[]>([]);
 
   useEffect(() => {
     const fetchImagesData = async () => {

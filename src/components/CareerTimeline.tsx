@@ -21,7 +21,7 @@ function CareerTimeline({
   onCareerSelect,
 }: CareerTimelineProps) {
   // map the icon name to the icon
-  function getIcon(iconName) {
+  function getIcon(iconName: string): JSX.Element {
     switch (iconName) {
       case "school":
         return <IconSchool size={16} />;
@@ -38,7 +38,7 @@ function CareerTimeline({
       case "search":
         return <IconSearch size={16} />;
       default:
-        return null; // Return null or a default icon
+        return <IconSchool size={16} />; // Return null or a default icon
     }
   }
 

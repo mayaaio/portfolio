@@ -2,7 +2,17 @@ import { Stack, Title, Text, Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import PhotoCarousel from "./PhotoCarousel";
 
-function TopSection({ atBottom, handleScrollDown, handleScrollUp }) {
+interface TopSectionProps {
+  atBottom: boolean;
+  handleScrollDown: () => void;
+  handleScrollUp: () => void;
+}
+
+function TopSection({
+  atBottom,
+  handleScrollDown,
+  handleScrollUp,
+}: TopSectionProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: -20 }}
